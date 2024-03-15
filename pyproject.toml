@@ -1,0 +1,39 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "frappe-chalice-demo"
+version = "2024.02.22"
+dependencies = [
+  "chalice",
+  "pydantic[email]",
+  "requests"
+]
+requires-python = ">=3.9"
+authors = [
+  {name = "Geraldine Echavarria Cortes", email = "geraldine.e.cortes@gmail.com"},
+]
+maintainers = [
+  {name = "Geraldine Echavarria Cortes", email = "geraldine.e.cortes@gmail.com"}
+]
+description = "Frapee Chalice Project"
+readme = "README.md"
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "nox", "pytest", "requests-mock"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
