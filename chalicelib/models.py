@@ -3,7 +3,19 @@ import pydantic
 
 
 class PQRSF(pydantic.BaseModel):
-	segmento: str
+	segmento: typing.Literal[
+		'Siste Top',
+		'Siste Premium',
+		'Sisteplus',
+		'Sisteclientes',
+		'Sin Asignar',
+		'Supertop',
+		'Top',
+		'Medium',
+		'Bottom',
+		'Low',
+		'Sin Asignar',
+	]
 	descripcion: str
 	solucion: typing.Optional[str] = None
 	tipo_usuario: typing.Literal['Cliente', 'Marcas Aliadas', 'Otro']
@@ -39,7 +51,7 @@ class PQRSF(pydantic.BaseModel):
 	nombre_almacen: str
 	departamento: str
 	ciudad: str
-	motivo: typing.Literal['No hay motivo']
+	motivo: str
 	criticidad: typing.Literal['Alta', 'Media', 'Baja']
 	raised_by: pydantic.EmailStr
 	tipo_pqrsf: typing.Literal['Petición', 'Queja', 'Reclamo', 'Sugerencia', 'Felicitación']

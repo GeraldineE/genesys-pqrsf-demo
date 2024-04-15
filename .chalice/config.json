@@ -6,10 +6,10 @@
       "api_gateway_stage": "api",
       "environment_variables": {
         "DEBUG": "true",
-        "JUPITER_URL": "https://jupiter.develop.sistecredito.informationsys.com",
+        "JUPITER_URL": "https://helpdesk.develop.informationsys.com",
         "JUPITER_PQSRF_RESOURCE_NAME": "PQRSF",
-        "JUPITER_API_KEY": "e92056c418475a4",
-        "JUPITER_API_SECRET": "f91c150c5797d40"
+        "JUPITER_API_KEY": "c48ec9ec266f8f5",
+        "JUPITER_API_SECRET": "7a52739856e7c93"
       }
     }
   }
