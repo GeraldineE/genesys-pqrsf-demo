@@ -62,3 +62,4 @@ class PQRSF(pydantic.BaseModel):
 	agente_involucrado: typing.Optional[str] = None
 	aliado_involucrado: typing.Optional[str] = None
 	experiencia: typing.Optional[typing.Literal[1, 2, 3, 4, 5]] = None
+	evidencias: typing.Optional[typing.List[str]] = None
